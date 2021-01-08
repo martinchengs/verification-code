@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VerificationCodeView">
+        <attr name="vcv_length" format="integer" />
+        <attr name="vcv_cursorColor" format="color" />
+        <attr name="vcv_cursorWidth" format="dimension" />
+        <attr name="vcv_outlook" format="enum">
+            <enum name="line" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+        <attr name="vcv_outlookStrokeWidth" format="dimension" />
+        <attr name="vcv_outlookStrokeNormalColor" format="color" />
+        <attr name="vcv_outlookStrokeActiveColor" format="color" />
+        <attr name="vcv_perSpacing" format="dimension" />
+        <attr name="vcv_outlookBackgroundColor" format="color" />
+        <attr name="cvc_outlookRadius" format="dimension" />
+        <attr name="cvc_passwordStyle" format="boolean" />
+    </declare-styleable>
+</resources>
