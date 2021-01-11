@@ -1,0 +1,32 @@
+ext {
+    // 此处填写刚才建立的maven仓库的仓库名称
+    bintrayRepo = 'android'
+    // library的group id
+    publishedGroupId = 'com.martinchengsj'
+    // library网站地址
+    siteUrl = 'https://github.com/martinchengs/verification-code'
+    // library仓库地址
+    gitUrl = 'https://github.com/martinchengs/verification-code.git'
+
+    // 注册时候的bintray username
+    developerId = 'maritnchengsj'
+    // 开发者名称
+    developerName = 'maritnchengsj'
+    // 开发者邮箱
+    developerEmail = 'maritnchengsj@gmail.com'
+
+    // 开源许可证（这里是Apache 2.0）
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+    // library artifact（单个module一般就填写library name）
+    artifact = 'verification-code'
+    libraryName = 'verification-code'
+    libraryVersion = '1.0.1'
+    libraryDescription = 'verification code 验证码输入框'
+    // bintrayName 是你在网页Repository页面能看到的名称
+    bintrayName = '' + artifact
+}
+
+apply from: '../uploader.gradle'

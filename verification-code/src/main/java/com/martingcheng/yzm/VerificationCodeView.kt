@@ -12,12 +12,13 @@ import android.text.InputFilter
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
 
 class VerificationCodeView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : androidx.appcompat.widget.AppCompatEditText(context, attrs, defStyleAttr) {
+) : EditText(context, attrs, defStyleAttr) {
     private val cursorPaint = Paint()
     private val stylePaint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.DITHER_FLAG)
     private var mLength: Int = 0
