@@ -15,6 +15,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
+import kotlin.math.abs
+import kotlin.math.max
 
 class VerificationCodeView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -83,8 +85,13 @@ class VerificationCodeView @JvmOverloads constructor(
         setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         //最大行数
         maxLines = 1
+
+        //去掉底部空隙
+        includeFontPadding = false
     }
 
+
+    fun getTextMaxLength() = mLength
 
     override fun onTextChanged(
         text: CharSequence?,
@@ -127,10 +134,12 @@ class VerificationCodeView @JvmOverloads constructor(
         //计算每一个的宽度
         mPerWidth = (viewWidth - paddingLeft - paddingRight - (mLength - 1) * mPerSpacing) / mLength
         val heightMode = MeasureSpec.getMode(heightMeasureSpec)
+        val minHeight =
+            abs(paint.ascent()) + abs(paint.descent()) + paddingTop + paddingBottom
         val viewHeight = if (heightMode == MeasureSpec.EXACTLY) {
-            MeasureSpec.getSize(heightMeasureSpec)
+            max(minHeight.toInt(), MeasureSpec.getSize(heightMeasureSpec))
         } else {
-            mPerWidth + paddingTop + paddingBottom
+            max(minHeight.toInt(), mPerWidth + paddingTop + paddingBottom)
         }
         val wordSize = paint.measureText("H")
         if (mPerWidth < wordSize) throw IllegalArgumentException("width is illegal")
@@ -300,7 +309,7 @@ class VerificationCodeView @JvmOverloads constructor(
 
     private fun showKeyboard() {
         isFocusable = true
-        isFocusableInTouchMode = true
+//        isFocusableInTouchMode = true
         requestFocus()
         val im =
             context.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager ?: return
