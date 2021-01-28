@@ -1,6 +1,7 @@
 ## 一个简单实用的验证码/密码输入控件
 
-[![Get automatic notifications about new "verification-code](https://www.bintray.com/docs/images/bintray_badge_color.png)](https://bintray.com/martinchengsj/android/verification-code?source=watch)
+![android](https://img.shields.io/badge/platfom-android-important)
+
 #### 一、如何使用
 ##### 1.引用
 ```gradle
