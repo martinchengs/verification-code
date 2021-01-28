@@ -1,6 +1,6 @@
 ## 一个简单实用的验证码/密码输入控件
 
-![android](https://img.shields.io/badge/platfom-android-important)
+[ ![Download](https://api.bintray.com/packages/martinchengsj/android/verification-code/images/download.svg?version=1.0.3) ](https://bintray.com/martinchengsj/android/verification-code/1.0.3/link)
 
 #### 一、如何使用
 ##### 1.引用
