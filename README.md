@@ -60,7 +60,7 @@ addOnVerificationCodeChangeListener(object :VerificationCodeView.OnVerificationC
 </declare-styleable>
 ```
 #### 二、预览
-[![s8PGwV.gif](https://s3.ax1x.com/2021/01/11/s8PGwV.gif)](https://imgchr.com/i/s8PGwV)
+[![s8PGwV.md.gif](https://s3.ax1x.com/2021/01/11/s8PGwV.md.gif)](https://imgchr.com/i/s8PGwV)
 
 #### Apache License
 ```
